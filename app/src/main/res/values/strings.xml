@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FastJoke</string>
+    <string name="app_name">Fast Joke</string>
     <string name="startButton">Выбрать категорию</string>
     <string name="exitButton">Выйти</string>
     <string name="createButton">Создать шутку</string>
