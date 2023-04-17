@@ -3,4 +3,6 @@
     <string name="startButton">Выбрать категорию</string>
     <string name="exitButton">Выйти</string>
     <string name="createButton">Создать шутку</string>
+    <string name="friendship">Дружба</string>
+    <string name="ChooseCategory">Выберите категорию</string>
 </resources>

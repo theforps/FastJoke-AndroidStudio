@@ -2,6 +2,7 @@ package com.example.fastjoke;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
         createButton = (Button) findViewById(R.id.create);
 
         startButton.setOnClickListener(y -> {
-            setContentView(R.layout.activity_choose_category);
+            startActivity(new Intent(MainActivity.this, ChooseCategory.class));
         });
         createButton.setOnClickListener(y -> {
-            setContentView(R.layout.activity_create_joke);
+            startActivity(new Intent(MainActivity.this, ChooseCategory.class));
         });
         exitButton.setOnClickListener(y -> {
             finish();
