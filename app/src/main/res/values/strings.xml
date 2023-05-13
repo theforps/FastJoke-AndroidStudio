@@ -5,4 +5,6 @@
     <string name="createButton">Создать шутку</string>
     <string name="friendship">Дружба</string>
     <string name="ChooseCategory">Выберите категорию</string>
+    <string name="create_joke">Создать</string>
+    <string name="joke_created">Шутка успешно добавлена!</string>
 </resources>
