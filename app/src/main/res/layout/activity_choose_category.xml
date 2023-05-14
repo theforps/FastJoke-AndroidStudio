@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.choosecategory.ChooseCategoryActivity"
-    android:background="@color/mainBack">
+    android:background="@color/mainBack"
+    tools:context=".screens.choosecategory.ChooseCategoryActivity">
 
     <TextView
         android:id="@+id/mainLabel"
@@ -45,34 +45,24 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <Button
-                android:id="@+id/friend"
-
-                android:onClick="CategoryClick"
-
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFriend"
                 android:layout_margin="10dp"
-
                 android:width="180dp"
                 android:height="60dp"
-
                 android:backgroundTint="#808080"
                 android:text="@string/friendship"
-
                 android:textColor="@color/mainBack"
                 android:textStyle="bold"
                 app:cornerRadius="18dp"
                 tools:ignore="UsingOnClickInXml" />
 
-            <Button
-
+            <com.google.android.material.button.MaterialButton
                 android:layout_margin="10dp"
-
                 android:width="180dp"
                 android:height="60dp"
-
                 android:backgroundTint="#808080"
                 android:text="@string/friendship"
-
                 android:textColor="@color/mainBack"
                 android:textStyle="bold"
                 app:cornerRadius="18dp" />

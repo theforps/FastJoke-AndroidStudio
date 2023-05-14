@@ -11,7 +11,7 @@ import com.example.fastjoke.model.Joke;
 
 @Database(
         entities = {Joke.class, History.class},
-        version = 3,
+        version = 4,
         exportSchema = false
 )
 public abstract class FastJokeAppDatabase extends RoomDatabase {

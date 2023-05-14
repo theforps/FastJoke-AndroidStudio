@@ -1,10 +1,15 @@
 package com.example.fastjoke.screens.createjoke;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.example.fastjoke.R;
@@ -14,6 +19,9 @@ import com.example.fastjoke.repository.FastJokeDao;
 import com.example.fastjoke.screens.MainActivity;
 import com.example.fastjoke.util.ViewModelFactory;
 
+import java.util.Objects;
+
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class CreateJokeActivity extends AppCompatActivity {
 
     private ActivityCreateJokeBinding binding;
@@ -24,6 +32,8 @@ public class CreateJokeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityCreateJokeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        setUpAutoCompleteTextView();
 
         FastJokeDao dao = FastJokeAppDatabase.getInstance(this).jokeDao();
         viewModel = new ViewModelProvider(this, new ViewModelFactory(dao)).get(CreateJokeViewModel.class);
@@ -39,7 +49,7 @@ public class CreateJokeActivity extends AppCompatActivity {
 
     private void createJoke() {
         String context = binding.etContext.getText().toString();
-        String category = binding.etCategory.getText().toString();
+        String category = binding.actCategory.getText().toString();
         String username = binding.etUsername.getText().toString();
 
         viewModel.createJoke(context, category, false, username);
@@ -47,5 +57,16 @@ public class CreateJokeActivity extends AppCompatActivity {
 
     private void onMainActivity() {
         startActivity(new Intent(this, MainActivity.class));
+    }
+
+    private void setUpAutoCompleteTextView() {
+        // TODO
+        String[] categories = {"Дружба", "Любовь", "Возраст"};
+        ArrayAdapter<String> adapterItems = new ArrayAdapter<>(this, R.layout.category_item, categories);
+        binding.actCategory.setAdapter(adapterItems);
+        binding.actCategory.setOnItemClickListener((parent, view, position, id) -> {
+            String item = adapterItems.getItem(position);
+            Objects.requireNonNull(binding.tilCategory.getEditText()).setText(item);
+        });
     }
 }

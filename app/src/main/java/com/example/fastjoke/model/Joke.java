@@ -19,12 +19,15 @@ public class Joke {
 
     public String username;
 
-    public Joke(int id, String context, boolean isBase, String category, String username) {
+    public String date;
+
+    public Joke(int id, String context, boolean isBase, String category, String username, String date) {
         this.id = id;
         this.context = context;
         this.isBase = isBase;
         this.category = category;
         this.username = username;
+        this.date = date;
     }
 
 }
