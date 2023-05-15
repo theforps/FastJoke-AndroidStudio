@@ -38,11 +38,14 @@ public class CreateJokeActivity extends AppCompatActivity {
         FastJokeDao dao = FastJokeAppDatabase.getInstance(this).jokeDao();
         viewModel = new ViewModelProvider(this, new ViewModelFactory(dao)).get(CreateJokeViewModel.class);
 
-
         binding.btnCreateJoke.setOnClickListener(l -> {
             createJoke();
             Toast.makeText(this, R.string.joke_created, Toast.LENGTH_SHORT).show();
             onMainActivity();
+        });
+
+        binding.btnBack.setOnClickListener(l -> {
+            startActivity(new Intent(this, MainActivity.class));
         });
 
     }

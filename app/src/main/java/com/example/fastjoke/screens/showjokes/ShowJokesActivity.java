@@ -18,6 +18,7 @@ import java.util.List;
 public class ShowJokesActivity extends AppCompatActivity {
 
     private ActivityShowJokesBinding binding;
+    private JokeAdapter jokeAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class ShowJokesActivity extends AppCompatActivity {
         FastJokeDao dao = FastJokeAppDatabase.getInstance(this).jokeDao();
         List<Joke> jokes = dao.getJokesByCategory(category);
 
-        binding.rvJokeList.setAdapter(new JokeAdapter(this, jokes));
+        jokeAdapter = new JokeAdapter(this, jokes, dao);
+        binding.rvJokeList.setAdapter(jokeAdapter);
     }
-
 }

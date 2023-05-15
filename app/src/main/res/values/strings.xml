@@ -7,4 +7,14 @@
     <string name="ChooseCategory">Выберите категорию</string>
     <string name="create_joke">Создать</string>
     <string name="joke_created">Шутка успешно добавлена!</string>
+    <string name="time">Время</string>
+    <string name="names">Имена</string>
+    <string name="Space">Космос</string>
+    <string name="Magic">Магия</string>
+    <string name="people">Люди</string>
+    <string name="whether">Погода</string>
+    <string name="future">Будущее</string>
+    <string name="ContentJoke">Содержание шутки</string>
+    <string name="Author">Автор</string>
+    <string name="Return">Вернуться</string>
 </resources>

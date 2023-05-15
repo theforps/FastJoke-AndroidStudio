@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fastjoke.databinding.ActivityChooseCategoryBinding;
 import com.example.fastjoke.model.Category;
+import com.example.fastjoke.screens.MainActivity;
 import com.example.fastjoke.screens.showjokes.ShowJokesActivity;
 
 public class ChooseCategoryActivity extends AppCompatActivity {
@@ -22,6 +23,10 @@ public class ChooseCategoryActivity extends AppCompatActivity {
 
         binding.btnFriend.setOnClickListener(l -> {
             onShowJokesActivity();
+        });
+
+        binding.btnBack.setOnClickListener(l -> {
+            startActivity(new Intent(this, MainActivity.class));
         });
 
     }

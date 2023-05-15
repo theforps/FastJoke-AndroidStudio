@@ -6,25 +6,53 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
+    android:background="@color/mainBack"
     tools:context=".screens.createjoke.CreateJokeActivity">
 
     <EditText
         android:id="@+id/etContext"
+        android:maxLines="15"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:hint="Контекст"/>
+        android:textColorHighlight="@color/black"
+        android:textColorLink="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:textColor="@color/black"
+        android:shadowColor="@color/black"
+        android:textColorHint="@color/black"
+        android:inputType="textCapSentences|textMultiLine"
+        android:scrollHorizontally="false"
+        android:hint="@string/ContentJoke"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilCategory"
         android:layout_width="match_parent"
+        android:textSize="25sp"
+        android:textColorHighlight="@color/black"
+        android:textColorLink="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:textColor="@color/black"
+        android:shadowColor="@color/black"
+        android:textColorHint="@color/black"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:hint="@string/ChooseCategory">
         
         <AutoCompleteTextView
+
+            android:textSize="20sp"
             android:id="@+id/actCategory"
             android:layout_width="match_parent"
+            android:textColorHighlight="@color/black"
+            android:textColorLink="@color/black"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:textColor="@color/black"
+            android:shadowColor="@color/black"
+            android:textColorHint="@color/black"
             android:layout_height="wrap_content"
             android:inputType="none"/>
 
@@ -32,17 +60,42 @@
 
     <EditText
         android:id="@+id/etUsername"
+        android:maxLines="1"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Пользователь"/>
+        android:textColorHighlight="@color/black"
+        android:textColorLink="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:textColor="@color/black"
+        android:shadowColor="@color/black"
+        android:textColorHint="@color/black"
+        android:hint="@string/Author"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCreateJoke"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/mainTitle"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"
+        android:text="@string/create_joke"
         android:textColor="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/create_joke"/>
+        android:textColorHint="@color/black" />
 
-
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:cornerRadius="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:backgroundTint="#FF0000"
+        android:text="@string/Return" />
 </LinearLayout>

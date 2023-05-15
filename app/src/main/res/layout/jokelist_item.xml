@@ -5,30 +5,49 @@
     android:layout_margin="15dp"
     app:cardElevation="5dp"
     app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="@color/mainTitle"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_margin="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvContext"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="19sp"
+            android:layout_height="47dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Шёл по лесу медведь, увидел машину горящую, сел в неё сгорел"/>
+            tools:text="Шёл по лесу медведь, увидел машину горящую, сел в неё сгорел" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            android:layout_width="38dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_action_name"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContext"
+            app:layout_constraintVertical_bias="1.0" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvAuthor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textStyle="italic"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
             android:textSize="20sp"
+            android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvContext"
             tools:text="TheForps" />
@@ -37,8 +56,12 @@
             android:id="@+id/tvDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@+id/tvAuthor"
             app:layout_constraintTop_toTopOf="@+id/tvAuthor"
             tools:text="12.12.2024" />
 
