@@ -12,7 +12,7 @@
         android:id="@+id/mainLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:lineHeight="20mm"
         android:text="@string/app_name"
         android:textAlignment="center"
@@ -24,14 +24,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052"
+        app:layout_constraintVertical_bias="0.614"
         tools:ignore="TextContrastCheck" />
 
     <LinearLayout
 
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="375dp"
         android:layout_margin="30dp"
         android:layout_marginBottom="36dp"
         android:orientation="vertical"
