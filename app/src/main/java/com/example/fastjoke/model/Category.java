@@ -4,6 +4,4 @@ package com.example.fastjoke.model;
 public class Category {
 
     public static String key = "category";
-
-    public static String friendsheep = "Дружба";
 }

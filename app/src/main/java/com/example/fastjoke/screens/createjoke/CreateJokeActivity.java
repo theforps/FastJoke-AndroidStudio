@@ -64,7 +64,7 @@ public class CreateJokeActivity extends AppCompatActivity {
 
     private void setUpAutoCompleteTextView() {
         // TODO
-        String[] categories = {"Дружба", "Любовь", "Возраст"};
+        String[] categories = {"Дружба", "Время", "Имена", "Космос", "Магия", "Люди", "Погода", "Будущее"};
         ArrayAdapter<String> adapterItems = new ArrayAdapter<>(this, R.layout.category_item, categories);
         binding.actCategory.setAdapter(adapterItems);
         binding.actCategory.setOnItemClickListener((parent, view, position, id) -> {
