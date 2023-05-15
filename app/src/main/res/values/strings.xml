@@ -17,4 +17,5 @@
     <string name="ContentJoke">Содержание шутки</string>
     <string name="Author">Автор</string>
     <string name="Return">Вернуться</string>
+    <string name="CreateJoke">Создайте шутку</string>
 </resources>

@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp">
 
-
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvContext"
             android:layout_width="match_parent"
@@ -30,24 +29,29 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDelete"
-            android:layout_width="38dp"
-            android:layout_height="35dp"
+            android:layout_width="45dp"
+            android:layout_height="42dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="4dp"
             android:background="@drawable/ic_action_name"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tvDate"
             app:layout_constraintTop_toBottomOf="@+id/tvContext"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvAuthor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvContext"
             tools:text="TheForps" />
@@ -56,13 +60,14 @@
             android:id="@+id/tvDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="92dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvAuthor"
-            app:layout_constraintTop_toTopOf="@+id/tvAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/tvContext"
             tools:text="12.12.2024" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

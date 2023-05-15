@@ -9,19 +9,28 @@
     android:background="@color/mainBack"
     tools:context=".screens.createjoke.CreateJokeActivity">
 
+    <androidx.constraintlayout.utils.widget.MotionLabel
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CreateJoke"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:textSize="45sp"
+        android:textColor="@color/mainTitle"
+        android:textStyle="bold"
+        />
     <EditText
         android:id="@+id/etContext"
         android:maxLines="15"
         android:textSize="25sp"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHighlight="@color/black"
-        android:textColorLink="@color/black"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
         android:textColor="@color/black"
-        android:shadowColor="@color/black"
         android:textColorHint="@color/black"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:inputType="textCapSentences|textMultiLine"
         android:scrollHorizontally="false"
         android:hint="@string/ContentJoke"/>
@@ -30,28 +39,28 @@
         android:id="@+id/tilCategory"
         android:layout_width="match_parent"
         android:textSize="25sp"
-        android:textColorHighlight="@color/black"
-        android:textColorLink="@color/black"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
+        android:textStyle="bold"
+
         android:textColor="@color/black"
-        android:shadowColor="@color/black"
         android:textColorHint="@color/black"
+
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:hint="@string/ChooseCategory">
         
         <AutoCompleteTextView
 
-            android:textSize="20sp"
+            android:textSize="25sp"
+            android:textStyle="bold"
             android:id="@+id/actCategory"
             android:layout_width="match_parent"
-            android:textColorHighlight="@color/black"
-            android:textColorLink="@color/black"
-            android:outlineAmbientShadowColor="@color/black"
-            android:outlineSpotShadowColor="@color/black"
+
+
+            android:background="@color/mainBack"
+            android:backgroundTint="@color/mainBack"
+
             android:textColor="@color/black"
-            android:shadowColor="@color/black"
+
             android:textColorHint="@color/black"
             android:layout_height="wrap_content"
             android:inputType="none"/>
@@ -62,6 +71,9 @@
         android:id="@+id/etUsername"
         android:maxLines="1"
         android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColorHighlight="@color/black"
@@ -78,6 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:textSize="20sp"
+
         app:cornerRadius="15dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/mainTitle"
@@ -96,6 +109,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/white"
+        android:layout_gravity="bottom"
         android:backgroundTint="#FF0000"
         android:text="@string/Return" />
 </LinearLayout>

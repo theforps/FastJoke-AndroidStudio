@@ -12,6 +12,8 @@ import com.example.fastjoke.model.Category;
 import com.example.fastjoke.model.Joke;
 import com.example.fastjoke.repository.FastJokeAppDatabase;
 import com.example.fastjoke.repository.FastJokeDao;
+import com.example.fastjoke.screens.MainActivity;
+import com.example.fastjoke.screens.choosecategory.ChooseCategoryActivity;
 
 import java.util.List;
 
@@ -32,5 +34,9 @@ public class ShowJokesActivity extends AppCompatActivity {
 
         jokeAdapter = new JokeAdapter(this, jokes, dao);
         binding.rvJokeList.setAdapter(jokeAdapter);
+
+        binding.btnBack.setOnClickListener(l -> {
+            startActivity(new Intent(this, ChooseCategoryActivity.class));
+        });
     }
 }
