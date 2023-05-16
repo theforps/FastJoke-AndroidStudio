@@ -39,9 +39,14 @@ public class CreateJokeActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this, new ViewModelFactory(dao)).get(CreateJokeViewModel.class);
 
         binding.btnCreateJoke.setOnClickListener(l -> {
-            createJoke();
-            Toast.makeText(this, R.string.joke_created, Toast.LENGTH_SHORT).show();
-            onMainActivity();
+            if(createJoke()) {
+                Toast.makeText(this, R.string.joke_created, Toast.LENGTH_SHORT).show();
+
+                startActivity(new Intent(this, MainActivity.class));
+            }
+            else {
+                Toast.makeText(this, "Неправильные данные", Toast.LENGTH_SHORT).show();
+            }
         });
 
         binding.btnBack.setOnClickListener(l -> {
@@ -50,16 +55,18 @@ public class CreateJokeActivity extends AppCompatActivity {
 
     }
 
-    private void createJoke() {
+    private boolean createJoke() {
         String context = binding.etContext.getText().toString();
         String category = binding.actCategory.getText().toString();
         String username = binding.etUsername.getText().toString();
 
-        viewModel.createJoke(context, category, false, username);
-    }
+        if (context.trim().equals("") || category.trim().equals("") || username.trim().equals(""))
+        {
+            return false;
+        }
 
-    private void onMainActivity() {
-        startActivity(new Intent(this, MainActivity.class));
+        viewModel.createJoke(context, category, false, username);
+        return true;
     }
 
     private void setUpAutoCompleteTextView() {

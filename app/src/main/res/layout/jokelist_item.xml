@@ -17,7 +17,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvContext"
             android:layout_width="match_parent"
-            android:layout_height="47dp"
+            android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
